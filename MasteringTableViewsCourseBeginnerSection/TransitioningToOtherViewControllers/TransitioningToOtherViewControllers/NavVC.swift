@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NavVC.swift
 //  TransitioningToOtherViewControllers
 //
 //  Created by Stephanie Ballard on 3/5/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class NavVc: UIViewController {
     
     var checklist = ["Subclass UITableViewDatasource",
                      "Create a prototype cell",
@@ -17,14 +17,10 @@ class ViewController: UIViewController {
                      "Add number of rows",
                      "Add cellForRowAt",
                      "Dequeue the cells"]
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
 }
 
-extension ViewController: UITableViewDataSource {
+extension NavVc: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return checklist.count
     }
@@ -37,8 +33,15 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension NavVc: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segue1", sender: nil)
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        let vc = storyBoard.instantiateViewController(withIdentifier: "detail")
+        
+        //showing view controllers programatically
+        navigationController?.pushViewController(vc, animated: true)
+        // present(vc, animated: true)
     }
 }
