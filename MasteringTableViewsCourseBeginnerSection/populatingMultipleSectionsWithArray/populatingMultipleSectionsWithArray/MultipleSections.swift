@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MultipleSections.swift
 //  populatingMultipleSectionsWithArray
 //
 //  Created by Stephanie Ballard on 3/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class MultipleSections: UIViewController, UITableViewDataSource {
 
     let fruit = [["Orange", "Apple", "Pear"], ["I", "Love", "Fruit!"], ["Hello", "World!"]]
     
