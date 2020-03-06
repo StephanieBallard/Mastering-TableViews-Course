@@ -21,6 +21,7 @@
 		5A087258241222C2000FD7FE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A087251241222C2000FD7FE /* Country.swift */; };
 		5A087259241222C2000FD7FE /* ExampleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A087252241222C2000FD7FE /* ExampleText.swift */; };
 		5A08725A241222C2000FD7FE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A087253241222C2000FD7FE /* DataService.swift */; };
+		5A08725C24122FD0000FD7FE /* FlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08725B24122FD0000FD7FE /* FlagCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5A087251241222C2000FD7FE /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5A087252241222C2000FD7FE /* ExampleText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleText.swift; sourceTree = "<group>"; };
 		5A087253241222C2000FD7FE /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		5A08725B24122FD0000FD7FE /* FlagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5A08723324121C14000FD7FE /* AppDelegate.swift */,
 				5A08723524121C14000FD7FE /* SceneDelegate.swift */,
 				5A08723724121C14000FD7FE /* ViewController.swift */,
+				5A08725B24122FD0000FD7FE /* FlagCell.swift */,
 				5A08723924121C14000FD7FE /* Main.storyboard */,
 				5A08724B241222A4000FD7FE /* FlagAssets.xcassets */,
 				5A08723C24121C15000FD7FE /* Assets.xcassets */,
@@ -171,6 +174,7 @@
 				5A087257241222C2000FD7FE /* Continent.swift in Sources */,
 				5A08723424121C14000FD7FE /* AppDelegate.swift in Sources */,
 				5A087259241222C2000FD7FE /* ExampleText.swift in Sources */,
+				5A08725C24122FD0000FD7FE /* FlagCell.swift in Sources */,
 				5A087255241222C2000FD7FE /* Difficulty.swift in Sources */,
 				5A08723624121C14000FD7FE /* SceneDelegate.swift in Sources */,
 			);

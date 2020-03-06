@@ -10,21 +10,24 @@ import UIKit
 
 class ViewController: UIViewController, DataService {
     
-    //var countries = []
-
+    var countries = [Country]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        countries = createCountries()!
+        
     }
-
-
 }
+
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FlagCell
+        cell.country = countries[indexPath.row]
+        return cell
     }
 }
