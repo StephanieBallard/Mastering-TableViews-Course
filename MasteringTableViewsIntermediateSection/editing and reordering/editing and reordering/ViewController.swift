@@ -37,7 +37,7 @@ class ViewController: UIViewController {
 //                   emojis.remove(at: indexPath.row)
 //                   tableView.deleteRows(at: [indexPath], with: .left)
 //               }
-        tableView.isEditing = true
+        tableView.isEditing = false
     }
 }
 
@@ -55,12 +55,12 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     //edit the rows
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            emojis.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
-        }
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            emojis.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .left)
+//        }
+//    }
     
     // to change the name of the delete button to say remove instead.
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
@@ -74,4 +74,25 @@ extension ViewController: UITableViewDelegate {
         emojis.remove(at: sourceIndexPath.row)
         emojis.insert(source, at: destinationIndexPath.row)
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Del") { _, _ in
+            
+            if let _ = tableView.cellForRow(at: indexPath) {
+            self.emojis.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+    }
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { _, _ in
+            print("Favorite")
+        }
+        favorite.backgroundColor = .blue
+        
+        let more = UITableViewRowAction(style: .default, title: "More") { _, _ in
+            print("More")
+        }
+        return [delete, more, favorite]
+}
 }
