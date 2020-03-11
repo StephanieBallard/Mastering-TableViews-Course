@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    // empty set that is ready to accept indexpaths
+    var checkmark = Set<IndexPath>()
+    
     @IBAction func refreshTable(_ sender: UIBarButtonItem) {
         //tableView.reloadData()
         
@@ -49,11 +52,28 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = emojis[indexPath.row]
+        
+        cell.accessoryType = checkmark.contains(indexPath) ? .checkmark : .none
+        
         return cell
     }
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = cell.accessoryType == .checkmark ? .none : .checkmark
+            
+            if cell.accessoryType == .checkmark {
+                checkmark.insert(indexPath)
+            } else {
+                checkmark.remove(indexPath)
+            }
+        }
+    }
+    
+    
     //edit the rows
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
