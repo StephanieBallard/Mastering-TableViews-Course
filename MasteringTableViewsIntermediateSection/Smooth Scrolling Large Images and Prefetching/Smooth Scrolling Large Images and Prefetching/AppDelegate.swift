@@ -8,23 +8,23 @@
 
 import UIKit
 
+var images = [#imageLiteral(resourceName: "4c"), #imageLiteral(resourceName: "img2"), #imageLiteral(resourceName: "img3"), #imageLiteral(resourceName: "img4"), #imageLiteral(resourceName: "img5"), #imageLiteral(resourceName: "img6"), #imageLiteral(resourceName: "img7"), #imageLiteral(resourceName: "img8"), #imageLiteral(resourceName: "img9"), #imageLiteral(resourceName: "1c"),#imageLiteral(resourceName: "2c"),#imageLiteral(resourceName: "3c"),#imageLiteral(resourceName: "4c"),#imageLiteral(resourceName: "5c"),#imageLiteral(resourceName: "6c"),#imageLiteral(resourceName: "7c"),#imageLiteral(resourceName: "8c"),#imageLiteral(resourceName: "9c")]
+
+func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+    
+    let scale = newWidth / image.size.width
+    let newHeight = image.size.height * scale
+    UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+    image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    
+    return newImage!
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var images = [#imageLiteral(resourceName: "4c"), #imageLiteral(resourceName: "img2"), #imageLiteral(resourceName: "img3"), #imageLiteral(resourceName: "img4"), #imageLiteral(resourceName: "img5"), #imageLiteral(resourceName: "img6"), #imageLiteral(resourceName: "img7"), #imageLiteral(resourceName: "img8"), #imageLiteral(resourceName: "img9"), #imageLiteral(resourceName: "1c"),#imageLiteral(resourceName: "2c"),#imageLiteral(resourceName: "3c"),#imageLiteral(resourceName: "4c"),#imageLiteral(resourceName: "5c"),#imageLiteral(resourceName: "6c"),#imageLiteral(resourceName: "7c"),#imageLiteral(resourceName: "8c"),#imageLiteral(resourceName: "9c")]
-
-    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
-      
-      let scale = newWidth / image.size.width
-      let newHeight = image.size.height * scale
-      UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-      image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
-      let newImage = UIGraphicsGetImageFromCurrentImageContext()
-      UIGraphicsEndImageContext()
-      
-      return newImage!
-    }
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
