@@ -13,6 +13,8 @@
 		5A255FF6241D8686000800F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A255FF4241D8686000800F4 /* Main.storyboard */; };
 		5A255FF8241D8687000800F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A255FF7241D8687000800F4 /* Assets.xcassets */; };
 		5A255FFB241D8687000800F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A255FF9241D8687000800F4 /* LaunchScreen.storyboard */; };
+		5A256003241D986D000800F4 /* KnobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A256002241D986D000800F4 /* KnobCell.swift */; };
+		5A256005241D9876000800F4 /* KnockerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A256004241D9876000800F4 /* KnockerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5A255FF7241D8687000800F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A255FFA241D8687000800F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A255FFC241D8687000800F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A256002241D986D000800F4 /* KnobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobCell.swift; sourceTree = "<group>"; };
+		5A256004241D9876000800F4 /* KnockerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnockerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				5A255FEE241D8686000800F4 /* AppDelegate.swift */,
 				5A255FF0241D8686000800F4 /* SceneDelegate.swift */,
 				5A255FF2241D8686000800F4 /* ViewController.swift */,
+				5A256002241D986D000800F4 /* KnobCell.swift */,
+				5A256004241D9876000800F4 /* KnockerCell.swift */,
 				5A255FF4241D8686000800F4 /* Main.storyboard */,
 				5A255FF7241D8687000800F4 /* Assets.xcassets */,
 				5A255FF9241D8687000800F4 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 				5A255FF3241D8686000800F4 /* ViewController.swift in Sources */,
 				5A255FEF241D8686000800F4 /* AppDelegate.swift in Sources */,
 				5A255FF1241D8686000800F4 /* SceneDelegate.swift in Sources */,
+				5A256005241D9876000800F4 /* KnockerCell.swift in Sources */,
+				5A256003241D986D000800F4 /* KnobCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
